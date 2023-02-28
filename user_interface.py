@@ -86,8 +86,6 @@ def search_phonebook_get_ids(search_key,database,search_requirement): # если
                 for i in database[k1].get(search_key):
                     if i == search_requirement:
                         search_result.append(k1)
-        # if len(search_result) == 0:
-        #     search_result = 'Такого контакта не найдено, попробуйте изменить запрос.'
     return search_result
     
 def translate_search_key(search_key):
@@ -139,8 +137,6 @@ def search_full_process(database):
                 print('Такого контакта не найдено, попробуйте изменить запрос.')
             else:
                 print_phonebook(database,search_res)
-                # for i in search_res:
-                #     print(f'{i} {database[i]}')
             search_key = '9'
 
 def search_and_correct_process(database):
